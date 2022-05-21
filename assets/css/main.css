@@ -41,12 +41,12 @@ body#photo-page{
 }
 
 body#video-page{
-    grid-template-columns: 0.5fr 2fr 4fr 2fr 0.5fr;
+    grid-template-columns: 0.5fr 2fr 6fr 2fr 0.5fr;
     grid-template-rows: 200px 80px auto 100px ;
     grid-template-areas: 
     "header header header header header"
     "nav nav nav nav nav"
-    ". section section section ."
+    ". aside-left section aside-right ."
     "footer footer footer footer footer "
     ;
 }
@@ -193,7 +193,6 @@ aside div img{
 
 aside div img:hover{
     transform:scale(0.9);
-    opacity: 0.8;
     transition: 0.4s;
 }
 
@@ -216,6 +215,15 @@ aside div a:hover{
     text-align: center;
 }
 
+.footer-contact{ 
+    margin: 99px 0px 0px 0px;
+}
+
+.last-news{
+    text-align: center;
+    margin: 0px 0px 30px 0px;
+}
+
 section{
     background: white;
     min-height: 400px;
@@ -226,6 +234,11 @@ section{
 
 section div {
     height: auto;
+    margin: 0px 0px 0px 0px;
+}
+
+section div:last-child{
+    margin: 0px 0px 50px 0px;
 }
 
 /*---Читать далее---*/
@@ -299,14 +312,26 @@ section p#video-gallery{
 
 }
 
+.photos-title {
+    text-align: center;
+    font-size: 28px;
+    margin: 50px 0px 50px 0px;
+}
+
+#photo-gallery a {
+    padding: 20px ;
+}
+
 #img{
     height: 100%;
     width: 100%;
-    margin: 7px 0 0 0;
+    display: block;
+    transition: 0.5s;
+    overflow: hidden;
 }
 
 #img:hover{
-    opacity: 0.7;
+    transform: scale(1.1);
 }
 
 #aside-right{
